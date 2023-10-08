@@ -10,12 +10,12 @@ export const Main = () => {
         <StyledMain>
             <Container>
             <FlexWrapper justify={"space-between"} align={"center"}>
-                <div>
+                <StyledMainTitle>
                     <Name> Lorem ipsum dolor amet </Name>
                     <MainTitle> Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod temporincididunt ut labore et dolore magna aliqua.
                     </MainTitle>
                     <Button> Let's Begin </Button>
-                </div>
+                </StyledMainTitle>
                 <Photo src={avatar} alt=" "/>
             </FlexWrapper>
             </Container>
@@ -27,12 +27,18 @@ const StyledMain = styled.section `
   min-height: 100vh;
   display: flex;
 `
+
+const StyledMainTitle = styled.div `
+  
+`
+
+
 const MainTitle = styled.h1 `
   color: ${theme.colors.fontTitle};
   font-size: 18px;
   font-weight: 500;
-  margin-top: 15px;
-  margin-bottom: 60px;
+  margin: 15px 0 60px 0;
+  
 `
 const Name = styled.h2 `
   font-size: 54px;

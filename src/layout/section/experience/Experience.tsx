@@ -2,6 +2,7 @@ import React from 'react';
 import styled from "styled-components";
 import {SectionTitle} from "../../../components/SectionTitle";
 import {Container} from "../../../components/Container";
+import {theme} from "../../../styles/Theme";
 
 export const Experience = () => {
     return (
@@ -36,7 +37,7 @@ export const Experience = () => {
 };
 
 const StyledExperience = styled.section `
-  /*display: flex;*/
+
 `
 const ExperienceScale = styled.ul `
   justify-content: space-between;
@@ -46,7 +47,22 @@ const ExperienceScale = styled.ul `
   margin: 70px 0 140px 0;
   gap: 20px;
   list-style: none;
-  
+  position: relative;
+
+  &::before {
+    content: "";
+    display: inline-block;
+    width: 78%;
+    height: 8px;
+    border-radius: 83px;
+    position: absolute;
+    background: linear-gradient(270deg, #13ADC7 0%, #6978D1 66.67%, #945DD6 100%);
+    top: 50px;
+    left: 120px;
+
+  }
+
+
 `
 
 const Year = styled.li `
@@ -55,17 +71,21 @@ const Year = styled.li `
   font-size: 18px;
   font-weight: 500;
   
-  
   position: relative;
 
-
   &::after {
-    content: '!';
-    padding: 0;
-    font-size: 10rem;
+    content: "";
+    display: inline-block;
+    width: 25px;
+    height: 25px;
+    border-radius: 50%;
     position: absolute;
-    top: 10px;
+    background-color: ${theme.colors.font};
+    top: 40px;
+    left: 120px;
   }
+  
+  
 
 `
 
@@ -73,7 +93,8 @@ const YearWork = styled.h3 `
   text-align: center;
   font-size: 26px;
   font-weight: 600;
-  
+
+   
 `
 
 const DescriptionExperience = styled.p `
