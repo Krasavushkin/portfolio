@@ -15,8 +15,8 @@ export const Projects = () => {
             <Container>
 
                 <SectionTitle> Projects </SectionTitle>
-                <ProjectsTable>
 
+                <FlexWrapper wrap={"wrap"} justify={"space-between"} gap={"42px"} height={"none"}>
                     <Project
                         src={Project1}
                         title={"PROJECT 1"}
@@ -37,28 +37,17 @@ export const Projects = () => {
                         title={"PROJECT 4"}
                         text={"Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua."}
                     />
-
-                </ProjectsTable>
+                </FlexWrapper>
 
             </Container>
+
         </StyledProjects>
     );
 };
 
 const StyledProjects = styled.section`
-  min-height: 100vh;
-  
-  
+  display: flex;
+  height: 100%;
+  padding-bottom: 160px;
 `
 
-const ProjectsTable = styled.div `
-  display: grid;
-  grid-template-columns: repeat(2, 550px);
-  grid-template-rows:  repeat(2, 670px);
-  column-gap: 42px;
-  row-gap: 60px;
-  max-width: 1170px;
-  min-height: 1600px;
-  right: 0;
-  justify-content: space-between;
-`

@@ -37,9 +37,8 @@ const StyledHeader = styled.header `
 `
 const PortfolioList = styled.div `
   display: flex;
-  gap: 13px;
+  gap: clamp(0.625rem, -0.966rem + 7.95vw, 5rem); // max 80px min 10px
 `
 const Portfolio = styled.span `
-  color: white;
   font-size: 30px;
 `

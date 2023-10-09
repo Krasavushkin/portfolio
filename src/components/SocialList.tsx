@@ -7,17 +7,17 @@ export const SocialList = () => {
             <StyledSocialList>
                 <SocialItem>
                     <SocialLink>
-                        <Icon height={"32px"} width={"32px"} iconId={"linkedin"}/>
+                        <Icon height={"34px"} width={"34px"} iconId={"linkedin"}/>
                     </SocialLink>
                 </SocialItem>
                 <SocialItem>
                     <SocialLink>
-                        <Icon height={"32px"} width={"32px"} iconId={"github"}/>
+                        <Icon height={"34px"} width={"34px"} iconId={"github"}/>
                     </SocialLink>
                 </SocialItem>
                 <SocialItem>
                     <SocialLink>
-                        <Icon height={"30px"} width={"35px"} iconId={"telegram"}/>
+                        <Icon height={"34px"} width={"34px"} iconId={"telegram"}/>
                     </SocialLink>
                 </SocialItem>
             </StyledSocialList>
@@ -40,7 +40,7 @@ const StyledSocialList = styled.ul `
   
 `
 const SocialItem = styled.li `
-  
+  padding-top: 10px;
 `
 const SocialLink = styled.a `
     

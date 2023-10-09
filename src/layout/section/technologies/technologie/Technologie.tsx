@@ -15,7 +15,7 @@ export const Technologie = ({width = 20}: TechnologiePropsType) => {
 };
 
 const StyledTechnologie = styled.div `
-  width: 900px;
+  width: 100%;
   background-color: #162950;
   border-radius: 83px;
   height: 17px;

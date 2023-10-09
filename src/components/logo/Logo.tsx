@@ -1,16 +1,20 @@
 import React from 'react';
 import {Icon} from "../icon/Icon";
+import styled from "styled-components";
 
 
 
 
 export const Logo = () => {
     return (
-
-        <a href="">
+        <StyledLogo href="">
             <Icon iconId={'ellipse1'}/>
-        </a>
+        </StyledLogo>
 
     );
 };
 
+
+const StyledLogo = styled.a `
+ 
+`

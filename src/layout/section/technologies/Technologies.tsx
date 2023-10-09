@@ -17,7 +17,7 @@ export const Technologies = () => {
 
                 <SectionTitle> Technologies </SectionTitle>
 
-                <TechnologieWrapper>
+                <TechnologiesWrapper>
                     <Name> HTML </Name>
                     <Technologie width={75}/>
                     <Name> CSS, Sass </Name>
@@ -26,13 +26,13 @@ export const Technologies = () => {
                     <Technologie width={55}/>
                     <Name> Styled component </Name>
                     <Technologie width={67.5}/>
-                    <SectionTitle> Additional technologies and skills </SectionTitle>
+                    <TechnologiesTitle> Additional technologies and skills </TechnologiesTitle>
                     <Additional>
                         <TechnologieIcon src={git} alt=" "/>
                         <TechnologieIcon src={Vector} alt=" "/>
                         <TechnologieIcon src={figma} alt=""/>
                     </Additional>
-                </TechnologieWrapper>
+                </TechnologiesWrapper>
 
 
 
@@ -47,11 +47,11 @@ const TechnologiesStyled = styled.section`
   justify-content: center;
 
 `
-const TechnologieWrapper = styled.div`
+const TechnologiesWrapper = styled.div`
   display: grid;
   justify-content: center;
   margin-top: 70px;
-  
+  padding: 0 10px 0 10px;
 
 `
 const Name = styled.h3`
@@ -61,6 +61,13 @@ const Name = styled.h3`
   font-weight: 600;
 
 `
+
+const TechnologiesTitle = styled.span `
+  margin-top: clamp(1.875rem, -0.17rem + 10.23vw, 7.5rem); //min 30px max 120px
+  font-size: 44px;
+  font-weight: 600;
+`
+
 const Additional = styled.ul `
   display: flex;
   gap: 50px;

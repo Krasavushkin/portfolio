@@ -37,7 +37,8 @@ export const Experience = () => {
 };
 
 const StyledExperience = styled.section `
-
+  display: flex;
+  height: 100%;
 `
 const ExperienceScale = styled.ul `
   justify-content: space-between;
@@ -45,7 +46,7 @@ const ExperienceScale = styled.ul `
   display: flex;
   box-sizing: border-box;
   margin: 70px 0 140px 0;
-  gap: 20px;
+  gap: 5px;
   list-style: none;
   position: relative;
 
@@ -55,21 +56,24 @@ const ExperienceScale = styled.ul `
     width: 78%;
     height: 8px;
     border-radius: 83px;
-    position: absolute;
     background: linear-gradient(270deg, #13ADC7 0%, #6978D1 66.67%, #945DD6 100%);
     top: 50px;
-    left: 120px;
+    left: 50%;
+    transform: translateX(-50%);
 
+    position: absolute;
   }
 
 
 `
 
 const Year = styled.li `
-  width: 260px;
+  max-width: 260px;
   text-align: center;
   font-size: 18px;
   font-weight: 500;
+  width: 100%;
+  height: 100%;
   
   position: relative;
 
@@ -79,13 +83,13 @@ const Year = styled.li `
     width: 25px;
     height: 25px;
     border-radius: 50%;
-    position: absolute;
     background-color: ${theme.colors.font};
     top: 40px;
-    left: 120px;
+    left: 50%;
+    transform: translateX(-50%);
+
+    position: absolute;
   }
-  
-  
 
 `
 
@@ -93,8 +97,8 @@ const YearWork = styled.h3 `
   text-align: center;
   font-size: 26px;
   font-weight: 600;
-
-   
+  max-height: 40px;
+  height: 100%;
 `
 
 const DescriptionExperience = styled.p `
@@ -102,6 +106,7 @@ const DescriptionExperience = styled.p `
   font-size: 18px;
   font-weight: 500;
   margin-top: 45px;
-
+  max-height: 140px;
+  height: 100%;
 `
 
