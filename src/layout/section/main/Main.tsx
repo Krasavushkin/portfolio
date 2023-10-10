@@ -17,7 +17,9 @@ export const Main = () => {
                     </MainTitle>
                     <Button> Let's Begin </Button>
                 </StyledMainTitle>
+                <PhotoWrapper>
                 <Photo src={avatar} alt=" "/>
+                </PhotoWrapper>
             </FlexWrapper>
             </Container>
         </StyledMain>
@@ -27,7 +29,7 @@ export const Main = () => {
 const StyledMain = styled.section `
   display: flex;
   height: 100%;
-  padding: 125px 0;
+  padding: 225px 0 125px 0;
 
  
 `
@@ -64,16 +66,20 @@ const Name = styled.h2 `
   font-size: 54px;
   font-weight: 600;
 `
+const PhotoWrapper = styled.div `
+  display: flex;
+  border-radius: 52px 0px;
+  background-image: linear-gradient(270deg, #13ADC7 0%, #6978D1 66.67%, #945DD6 100%);
+
+`
 const Photo = styled.img `
   width: 380px;
   height: 450px;
   object-fit: cover;
   border-radius: 50px 0px;
-  border: 5px solid #8643DC;
-  background: lightgray 50% / cover no-repeat;
-
- 
-
+  margin: 5px;
+ /* border: 5px solid #8643DC;
+  background: lightgray 50% / cover no-repeat;*/
 
 
 `
