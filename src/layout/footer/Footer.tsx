@@ -13,7 +13,7 @@ export const Footer = () => {
                         123-456-789
                     </Connect>
                     <Connect> Email: <br/>
-                        xxx@xyz.com
+                        <Mail> xxx@xyz.com </Mail>
                     </Connect>
                     <SocialList/>
                 </ConnectItem>
@@ -41,4 +41,8 @@ const ConnectItem = styled.ul `
   justify-content: space-between;
   align-items: center;
   margin: 42px 0 42px 0;
+`
+
+const Mail = styled.a `
+  cursor: pointer;
 `

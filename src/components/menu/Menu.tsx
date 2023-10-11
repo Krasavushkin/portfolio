@@ -1,5 +1,6 @@
 import React from 'react';
 import styled from "styled-components";
+import {theme} from "../../styles/Theme";
 
 export const Menu = (props: {menuItems: Array <string>}) => {
     return (
@@ -31,4 +32,11 @@ const StyledMenu = styled.nav `
     text-decoration: none;
        
   }
+  
+  
+  a:hover {
+    color: ${theme.colors.fontTitle};
+    text-decoration: underline;
+  }
+  
 `
