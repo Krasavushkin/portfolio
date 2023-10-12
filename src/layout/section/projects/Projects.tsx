@@ -16,7 +16,7 @@ export const Projects = () => {
 
                 <SectionTitle> Projects </SectionTitle>
 
-                <FlexWrapper wrap={"wrap"} justify={"space-between"} gap={"42px"} height={"none"}>
+                <FlexWrapper wrap={"wrap"} justify={"space-between"} gap={"50px"} margin={"0 0 140px 0"}>
                     <Project
                         src={Project1}
                         title={"PROJECT 1"}
@@ -48,6 +48,6 @@ export const Projects = () => {
 const StyledProjects = styled.section`
   display: flex;
   height: 100%;
-  padding-bottom: 160px;
+  /*padding-bottom: 100px;*/
 `
 

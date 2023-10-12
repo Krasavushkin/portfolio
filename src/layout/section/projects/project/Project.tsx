@@ -28,10 +28,9 @@ const StyledProject = styled.div `
   border-radius: 50px 0;
   border: 1px solid #A39D9D;
   background: #0F1624;
-  padding: 20px;
-  justify-content: space-between;
+  padding: 25px;
   align-items: center;
-  /*margin-bottom: 60px;*/
+  
 `
 
 const Image = styled.img `
@@ -56,4 +55,23 @@ const Text = styled.p `
   margin-bottom: 50px;
   font-size: 18px;
   font-weight: 500;
+  
+  position: relative;
+  
+  &::before {
+    content: "";
+    display: inline-block;
+    width: 60%;
+    height: 4px;
+    border-radius: 83px;
+    background: linear-gradient(270deg, #13ADC7 0%, #6978D1 66.67%, #945DD6 100%);
+    left: 50%;
+    transform: translateX(-50%);
+    top: -40px;
+    
+    
+    
+    position: absolute;
+    
+  }
 `
