@@ -6,6 +6,7 @@ import {Icon} from "../../components/icon/Icon";
 import {Container} from "../../components/Container";
 import {FlexWrapper} from "../../components/FlexWrapper";
 import {SocialList} from "../../components/SocialList";
+import {MobileMenu} from "./mobileMenu";
 
 
 const items = ["Projects", "Technologies", "About me"]
@@ -19,7 +20,8 @@ export const Header = () => {
                 <Portfolio> Portfolio </Portfolio>
             </PortfolioList>
             <Menu menuItems={items}/>
-               <SocialList />
+                <MobileMenu menuItems={items}/>
+                <SocialList />
             </FlexWrapper>
             </Container>
         </ StyledHeader>

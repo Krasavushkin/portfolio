@@ -6,11 +6,12 @@ import {FlexWrapper} from "../../../components/FlexWrapper";
 import {Container} from "../../../components/Container";
 import {theme} from "../../../styles/Theme";
 import {Icon} from "../../../components/icon/Icon";
+import {font} from "../../../styles/Common";
 export const Main = () => {
     return (
         <StyledMain>
             <Container>
-            <FlexWrapper justify={"space-between"} align={"center"}>
+            <FlexWrapper justify={"space-between"} align={"center"} wrap={"wrap"}>
                 <StyledMainTitle>
                     <Name> Lorem ipsum dolor amet </Name>
                     <MainTitle> Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod temporincididunt ut labore et dolore magna aliqua.
@@ -35,6 +36,9 @@ const StyledMain = styled.section `
 `
 
 const StyledMainTitle = styled.div `
+  max-width: 675px;
+  width: 100%;
+  
   position: relative;
 
   &::after {
@@ -44,33 +48,28 @@ const StyledMainTitle = styled.div `
     height: 666px;
     z-index: 2;
     background-image: url("drawing1.png") ;
- 
-   
-
-
+  
     position: absolute;
   }
 
 `
 
-
 const MainTitle = styled.h1 `
-  color: ${theme.colors.fontTitle};
-  font-size: 18px;
-  font-weight: 500;
+  ${font( {weight: 500, color: theme.colors.fontTitle, Fmax: 18, Fmin: 10})}
   margin: 15px 0 60px 0;
   
-
 `
 const Name = styled.h2 `
-  font-size: 54px;
-  font-weight: 600;
+  ${font( {weight: 600, Fmax: 54, Fmin: 36})}
+
+  
 `
+
 const PhotoWrapper = styled.div `
   display: flex;
   border-radius: 52px 0px;
   background-image: linear-gradient(270deg, #13ADC7 0%, #6978D1 66.67%, #945DD6 100%);
-
+  
 `
 const Photo = styled.img `
   width: 380px;
@@ -78,8 +77,11 @@ const Photo = styled.img `
   object-fit: cover;
   border-radius: 50px 0px;
   margin: 5px;
- /* border: 5px solid #8643DC;
-  background: lightgray 50% / cover no-repeat;*/
 
-
+  @media ${theme.media.mobile} {
+    
+    width: 330px;
+    height: 390px;
+  }
+  
 `
