@@ -10,7 +10,7 @@ import {MobileMenu} from "./mobileMenu";
 
 
 const items = ["Projects", "Technologies", "About me"]
-export const Header = () => {
+export const  Header = () => {
     return (
         <StyledHeader>
             <Container>

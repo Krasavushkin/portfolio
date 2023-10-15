@@ -8,6 +8,8 @@ import Vector from "../../../assets/images/Vector.png"
 import figma from "../../../assets/images/figma.png"
 import {Container} from "../../../components/Container";
 import {Experience} from "../experience/Experience";
+import {theme} from "../../../styles/Theme";
+import {font} from "../../../styles/Common";
 
 export const Technologies = () => {
     return (
@@ -16,15 +18,15 @@ export const Technologies = () => {
             <Container>
 
                 <SectionTitle> Technologies </SectionTitle>
-
+                <FlexWrapper justify={"center"}>
                 <TechnologiesWrapper>
-                    <Name> HTML </Name>
+                    <Name> Html </Name>
                     <Technologie width={75}/>
-                    <Name> CSS, Sass </Name>
+                    <Name> Css, Sass </Name>
                     <Technologie width={67.5}/>
                     <Name> React </Name>
                     <Technologie width={55}/>
-                    <Name> Styled component </Name>
+                    <Name> Styled components </Name>
                     <Technologie width={67.5}/>
                     <TechnologiesTitle> Additional technologies and skills </TechnologiesTitle>
                     <Additional>
@@ -33,7 +35,7 @@ export const Technologies = () => {
                         <TechnologieIcon src={figma} alt=""/>
                     </Additional>
                 </TechnologiesWrapper>
-
+                </FlexWrapper>
 
 
             </Container>
@@ -45,37 +47,49 @@ export const Technologies = () => {
 const TechnologiesStyled = styled.section`
   display: flex;
   justify-content: center;
+  align-items: center;
 
 `
 const TechnologiesWrapper = styled.div`
-  display: grid;
-  justify-content: center;
-  margin-top: 70px;
-  padding: 0 10px 0 10px;
+  display: grid ;
+  max-width: 940px;
+  width: 100%;
+  padding: 0 20px;
+  margin: 0 auto;
 
 `
 const Name = styled.h3`
   color: white;
-  margin: 20px 15px;
-  font-size: 26px;
-  font-weight: 600;
+/*  font-size: 26px;
+  font-weight: 600;*/
+  margin: 35px 0 5px 25px;
+  ${font( {weight: 600, color: theme.colors.font, Fmax: 22, Fmin: 16})};
 
 `
 
 const TechnologiesTitle = styled.span `
-  margin-top: clamp(1.875rem, -0.17rem + 10.23vw, 7.5rem); //min 30px max 120px
-  font-size: 44px;
-  font-weight: 600;
+  max-width: 900px;
+  width: 100%;
+  margin-top: 120px;/*clamp(1.875rem, -0.17rem + 10.23vw, 7.5rem); *///min 30px max 120px
+  text-align: center;
+  ${font( {weight: 600, color: theme.colors.font, Fmax: 38, Fmin: 24})}
+ 
 `
 
 const Additional = styled.ul `
   display: flex;
   gap: 50px;
   justify-content: center;
-  margin: 70px 0 170px 0;
+  margin: 80px 0 170px 0;
  
 `
 
 const TechnologieIcon = styled.img `
+  
+  @media ${theme.media.mobile} {
+
+    width: 50px;
+    height: 50px;
+  }
 
 `

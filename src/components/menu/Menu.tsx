@@ -1,6 +1,7 @@
 import React from 'react';
 import styled from "styled-components";
 import {theme} from "../../styles/Theme";
+import {SocialList} from "../SocialList";
 
 export const Menu = (props: {menuItems: Array <string>}) => {
     return (
@@ -14,17 +15,29 @@ export const Menu = (props: {menuItems: Array <string>}) => {
                 })}
 
             </ul>
+
+
         </StyledMenu>
     );
 };
 
 const StyledMenu = styled.nav `
+
+  
   ul {
     display:flex;
-    gap: 80px;
-    justify-content: center;
+    max-width: 410px;
+    width: 100%;
+    gap: clamp(0.625rem, -0.966rem + 7.95vw, 5rem);
+    justify-content: space-between;
     list-style: none;
    
+  }
+  
+  @media ${theme.media.tablet} {
+    display: none;
+    
+    
   }
   
   a{

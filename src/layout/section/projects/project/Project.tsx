@@ -30,7 +30,7 @@ const StyledProject = styled.div `
   background: #0F1624;
   padding: 25px;
   align-items: center;
-  
+  margin: 0 auto;
 `
 
 const Image = styled.img `
