@@ -3,6 +3,7 @@ import styled from "styled-components";
 import {SectionTitle} from "../../../components/SectionTitle";
 import {Container} from "../../../components/Container";
 import {theme} from "../../../styles/Theme";
+import {font} from "../../../styles/Common";
 
 export const Experience = () => {
     return (
@@ -44,6 +45,7 @@ const ExperienceScale = styled.ul `
   justify-content: space-between;
   align-items: center;
   display: flex;
+  padding: 0 20px;
   box-sizing: border-box;
   margin: 70px 0 140px 0;
   gap: 5px;
@@ -53,7 +55,7 @@ const ExperienceScale = styled.ul `
   &::before {
     content: "";
     display: inline-block;
-    width: 78%;
+    width: 75%;
     height: 8px;
     border-radius: 83px;
     background: linear-gradient(270deg, #13ADC7 0%, #6978D1 66.67%, #945DD6 100%);
@@ -70,8 +72,6 @@ const ExperienceScale = styled.ul `
 const Year = styled.li `
   max-width: 260px;
   text-align: center;
-  font-size: 18px;
-  font-weight: 500;
   width: 100%;
   height: 100%;
   
@@ -103,8 +103,10 @@ const YearWork = styled.h3 `
 
 const DescriptionExperience = styled.p `
   text-align: center;
-  font-size: 18px;
-  font-weight: 500;
+  ${font( {weight: 500, Fmax: 16, Fmin: 10})};
+  line-height: normal;
+  /*  font-size: 18px;
+  font-weight: 500;*/
   margin-top: 45px;
   max-height: 140px;
   height: 100%;
